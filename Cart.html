@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="shortcut icon" href="./img/favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    
+        <style>
+    
+            body {
+                margin: 0px;
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDM9-gcl-Nu7YNL-A2AKcDI9-88EtyvUQzfg&usqp=CAU");
+            }
+    
+            #nav {
+                height: 60px;
+                background-color: black;
+                padding-top: 10px;
+                padding-left: 20px;
+            }
+    
+            #logo {
+                color: #fff;
+                font-size: xx-large;
+                letter-spacing: 1px;
+                margin-bottom: 10px;
+            }
+    
+            #logo:hover {
+                cursor: pointer;
+            }
+    
+            img {
+                width: 70px;
+                height: 70px;
+                border: 3px solid #454544;
+            }
+    
+            
+    
+            #see {
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 10px;
+                position: relative;
+                overflow: hidden;
+                margin-bottom: 10px;
+            }
+    
+    
+            h1 {
+                color: #fff;
+            }
+    
+            input {
+                width: 50px;
+                height: 50px;
+                background-color: rgb(0, 255, 0);
+                border-radius: 10px;
+                border: none;
+                text-align: center;
+                font-size: larger;
+                color: #fff;
+                font-weight: bold;
+            }
+    
+            #sees {
+                margin-top: 20px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                width: 350px;
+                justify-content: space-between;
+            }
+    
+            #wth {
+                width: 1000px;
+            }
+    
+            p {
+                font-weight: bold;
+    
+            }
+    
+            .main {
+                background-color: rgb(0, 0, 0);
+                margin: 30px auto;
+                width: 95%;
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
+                border-top: 5px solid #181d46;
+                margin-bottom: 300px;
+            }
+    
+            .main .a h1 {
+                font-size: 20px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #181d46;
+                margin-bottom: 30px;
+            }
+    
+            #see {
+                list-style: none;
+            }
+    
+            #see li {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 10px;
+                position: relative;
+                overflow: hidden;
+                margin-bottom: 10px;
+            }
+    
+            li div {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                width: 350px;
+            }
+    
+            li .aa {
+                width: 150px;
+                align-items: center;
+                justify-content: space-between;
+                padding-right: 40px;
+            }
+    
+            li p {
+                text-align: left;
+            }
+    
+            li p.q {
+                padding: 10px;
+                background-color: #181d46;
+                border-radius: 5px;
+                color: white;
+                font-weight: bolder;
+                font-size: 19px;
+                text-align: center;
+                width: 50px;
+            }
+            p{
+                color: #fff;
+            }
+    
+            li img {
+                width: 60px;
+                height: 60px;
+                object-fit: cover;
+                border-radius: 5px;
+                border: 1px solid #181d46;
+            }
+    
+            #see li i {
+                color: #ffffff;
+                font-size: 20px;
+                font-weight: bolder;
+                cursor: pointer;
+            }
+    
+            #checkOut {
+                cursor: pointer;
+                background-color: #181d46;
+                color: #fff;
+                border: none;
+                border-radius: 10px;
+                padding: 15px;
+               padding-left: 45%;
+               font-weight: bold;
+               display: none;
+               font-size: x-large;
+            }
+    
+            #see li:hover::before {
+                animation: fade 1s linear;
+            }
+            #nothing{
+                color: #929090;
+                text-align: center;
+            }
+            #checkOut:hover {
+                background-color: orangered;
+                color: gold;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <nav class="sticky top-0 bg-slate-900 bg-opacity-90 backdrop-blur backdrop-filter z-40"
+            data-headlessui-state="">
+            <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+                <div class="relative flex h-16 md:h-20 lg:gap-x-4 justify-between items-center">
+                    <div class="flex items-center justify-center gap-x-2">
+                        <div class="flex-shrink-0 flex items-center text-2xl font-bold focus:outline-none focus:ring px-3 py-2 rounded-sm gap-x-2 cursor-pointer"
+                            href="/"><span
+                                style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%"><span
+                                    style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%"><img
+                                        style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0"
+                                        alt="" aria-hidden="true"
+                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"></span><img
+                                    alt=""
+                                    src="https://www.next.co.uk/static-content/icons/header/next/v1/vision/new-next-black-logo.svg"
+                                    decoding="async" data-nimg="intrinsic" class="w-full h-full"
+                                    style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                                    srcset="https://www.next.co.uk/static-content/icons/header/next/v1/vision/new-next-black-logo.svg 1x, https://www.next.co.uk/static-content/icons/header/next/v1/vision/new-next-black-logo.svg 2x"><noscript><img
+                                        alt=""
+                                        srcSet="https://www.next.co.uk/static-content/icons/header/next/v1/vision/new-next-black-logo.svg 1x, https://www.next.co.uk/static-content/icons/header/next/v1/vision/new-next-black-logo.svg 2x"
+                                        src="https://www.next.co.uk/static-content/icons/header/next/v1/vision/new-next-black-logo.svg"
+                                        decoding="async" data-nimg="intrinsic"
+                                        style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                                        class="w-full h-full" loading="lazy" /></noscript></span><span
+                                class="text-white hidden md:inline">NextShop</span></div>
+                        <div class="hidden lg:block lg:ml-6">
+                            <div class="flex space-x-4"><span
+                                    class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer"
+                                    href="/">Home</span><span
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer"
+                                    href="/search"><a href="./Shopnow.html" style="color: white;">Shop
+                                        Now</a></span></div>
+                        </div>
+                    </div>
+                    <div class="flex-1 flex justify-center items-center px-2 lg:ml-6 lg:justify-end">
+                        <form class="max-w-lg w-full lg:max-w-xs"><label for="search" class="sr-only">Search</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="2" stroke="currentColor" aria-hidden="true"
+                                        class="h-5 w-5 text-gray-400">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                </div><input type="search" id="search" name="search"
+                                    class="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 bg-gray-700 text-gray-300 placeholder-gray-400 focus:outline-none focus:bg-white focus:border-white focus:ring-white focus:text-gray-900 sm:text-sm lg:max-w-sm"
+                                    placeholder="Search" value="">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="flex items-center lg:hidden"><button
+                            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-offset-gray-800 focus:ring-white"
+                            id="headlessui-disclosure-button-2" type="button" aria-expanded="false"
+                            data-headlessui-state=""><span class="sr-only">Open main menu</span><svg
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" aria-hidden="true" class="block h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16">
+                                </path>
+                            </svg></button></div>
+                    <div class="flex items-center">
+                        <a href="./Cart.html">
+                            <button type="button"
+                            class="relative flex-shrink-0 p-2 text-gray-400 hover:text-white focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-offset-gray-800 focus:ring-white rounded-md"
+                            href="./Cart.html"><span class="sr-only">View Cart</span><svg xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                aria-hidden="true" class="h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                            </svg></button>
+                        </a>
+                        <div class="relative flex-shrink-0 z-40" data-headlessui-state="">
+                            <div class="flex-shrink-0 text-white hidden lg:flex flex-col ml-4"><span
+                                    class="text-gray-300 font-medium">Hello,</span>
+                            </div>
+                            <button id="signout" style=" align-items: center; color: white ;"> Sign Out </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="main">
+            <div class="a">
+                <h1>Cart Products</h1>
+            </div>
+            <h1 id="nothing">No Items Here!</h1>
+            <ul id="see">
+    
+            </ul>
+            <button class="fa-solid fa-cart-shopping" id="checkOut">
+                 Checkout
+            </button>
+        </div>
+        <script type="module" src="./JS/Cart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </body>
+    
+    </html>
+
+
+
+
+</body>
+
+</html>

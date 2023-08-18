@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <link rel="shortcut icon" href="./img/favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./CSS/style.css">
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: #F3F4F6;
+        }
+
+        .container {
+            background-color: white;
+            padding: 50px;
+            display: flex;
+            column-gap: 50px;
+            align-items: flex-start;
+
+            width: 70%;
+            flex-direction: row;
+        }
+
+        #quantity {
+            width: 70px;
+            font-size: 20px;
+            border: 2px solid #5147E8;
+            border-radius: 30px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="sticky top-0 bg-slate-900 bg-opacity-90 backdrop-blur backdrop-filter z-40" data-headlessui-state="">
+        <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+            <div class="relative flex h-16 md:h-20 lg:gap-x-4 justify-between items-center">
+                <div class="flex items-center justify-center gap-x-2">
+                    <div class="flex-shrink-0 flex items-center text-2xl font-bold focus:outline-none focus:ring px-3 py-2 rounded-sm gap-x-2 cursor-pointer"
+                        href="/"><span
+                            style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%"><span
+                                style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%"><img
+                                    style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0"
+                                    alt="" aria-hidden="true"
+                                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e"></span><img
+                                alt=""
+                                src="https://www.next.co.uk/static-content/icons/header/next/v1/vision/new-next-black-logo.svg"
+                                decoding="async" data-nimg="intrinsic" class="w-full h-full"
+                                style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                                srcset="https://www.next.co.uk/static-content/icons/header/next/v1/vision/new-next-black-logo.svg 1x, https://www.next.co.uk/static-content/icons/header/next/v1/vision/new-next-black-logo.svg 2x"><noscript><img
+                                    alt=""
+                                    srcSet="https://www.next.co.uk/static-content/icons/header/next/v1/vision/new-next-black-logo.svg 1x, https://www.next.co.uk/static-content/icons/header/next/v1/vision/new-next-black-logo.svg 2x"
+                                    src="https://www.next.co.uk/static-content/icons/header/next/v1/vision/new-next-black-logo.svg"
+                                    decoding="async" data-nimg="intrinsic"
+                                    style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                                    class="w-full h-full" loading="lazy" /></noscript></span><span
+                            class="text-white hidden md:inline">NextShop</span></div>
+                    <div class="hidden lg:block lg:ml-6">
+                        <div class="flex space-x-4"><span
+                                class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer"
+                                href="/">Home</span><span
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer"
+                                href="/search"><a href="./Shopnow.html" style="color: white;">Shop
+                                    Now</a></span></div>
+                    </div>
+                </div>
+                <div class="flex-1 flex justify-center items-center px-2 lg:ml-6 lg:justify-end">
+                    <form class="max-w-lg w-full lg:max-w-xs"><label for="search" class="sr-only">Search</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" aria-hidden="true" class="h-5 w-5 text-gray-400">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                            </div><input type="search" id="search" name="search"
+                                class="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 bg-gray-700 text-gray-300 placeholder-gray-400 focus:outline-none focus:bg-white focus:border-white focus:ring-white focus:text-gray-900 sm:text-sm lg:max-w-sm"
+                                placeholder="Search" value="">
+                        </div>
+                    </form>
+                </div>
+                <div class="flex items-center lg:hidden"><button
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-offset-gray-800 focus:ring-white"
+                        id="headlessui-disclosure-button-2" type="button" aria-expanded="false"
+                        data-headlessui-state=""><span class="sr-only">Open main menu</span><svg
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" aria-hidden="true" class="block h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16">
+                            </path>
+                        </svg></button></div>
+                <div class="flex items-center">
+                    <a href="./Cart.html">
+                        <button type="button"
+                            class="relative flex-shrink-0 p-2 text-gray-400 hover:text-white focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-offset-gray-800 focus:ring-white rounded-md"
+                            href="./Cart.html"><span class="sr-only">View Cart</span><svg
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                            </svg></button>
+                    </a>
+                    <div class="relative flex-shrink-0 z-40" data-headlessui-state="">
+                        <div class="flex-shrink-0 text-white hidden lg:flex flex-col ml-4"><span
+                                class="text-gray-300 font-medium">Hello,</span>
+                        </div>
+                        <button id="signout" style=" align-items: center; color: white ;"> Sign Out </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="main" style="display: flex; justify-content: center; align-items: center;flex-wrap: wrap;">
+
+        <div class="container">
+            <div style="padding-left: 50px;">
+
+                <img style=" border-radius: 20px; width: 400px; height: 550px; margin-top: 25px; " src="" id="image"
+                    alt="Product">
+                <br><br><br>
+                <h2>Customer Reviews</h2>
+                <p> <i style="color: purple;" class="fa-solid fa-star"></i><i style="color: purple;"
+                        class="fa-solid fa-star"></i><i style="color: purple;" class="fa-solid fa-star"></i><i
+                        style="color: purple;" class="fa-solid fa-star"></i><i style="color: purple;"
+                        class="fa-solid fa-star"></i>
+                    Based on 1 reviews</p>
+                <p>To write a review, you must first
+                <p style="color: purple;">Sign in</p>
+                </p>
+            </div>
+            <div>
+                <h1 style="margin-top: 25px;" id="name"></h1>
+                <h3 style="margin-top: 10px;" id="price"></h3>
+                <i style="color: purple; margin-top: 10px; " class="fa-solid fa-star"></i><i style="color: purple;"
+                    class="fa-solid fa-star"></i><i style="color: purple;" class="fa-solid fa-star"></i><i
+                    style="color: purple;" class="fa-solid fa-star"></i><i style="color: purple;"
+                    class="fa-solid fa-star"></i>
+                <p style="font-size: 16.1px; margin-top: 10px;">Quisque varius diam vel metus mattis, id aliquam diam
+                    rhoncus. Proin vitae magna in dui finibus malesuada et at nulla. Morbi elit ex, viverra vitae ante
+                    vel, blandit feugiat ligula. Fusce fermentum iaculis nibh, at sodales leo maximus a. Nullam
+                    ultricies sodales nunc, in pellentesque lorem mattis quis. Cras imperdiet est in nunc tristique
+                    lacinia. Nullam aliquam mauris eu accumsan tincidunt. Suspendisse velit ex, aliquet vel ornare vel,
+                    dignissim a tortor.</p>
+                <p style="font-size: 16.5px;">
+                    <br>
+                    Morbi ut sapien vitae odio accumsan gravida. Morbi vitae erat auctor, eleifend nunc a, lobortis
+                    neque. Praesent aliquam dignissim viverra. Maecenas laucs odio, feugiat eu nunc sit amet, maximus
+                    sagittis dolor. Vivamus nisi sapien, elementum sit amet eros sit amet, ultricies cursus ipsum. Sed
+                    consequat luctus ligula. Curabitur laoreet rhoncus blandit. Aenean vel diam ut arcu pharetra
+                    dignissim ut sed leo. Vivamus faucibus, ipsum in vestibulum vulputate, lorem orci convallis quam,
+                    sit amet consequat nulla felis pharetra lacus. Duis semper erat mauris, sed egestas purus commodo
+                    vel.
+                </p>
+                <br>
+                <h3 id="Brand">Brand :</h3><br>
+                <h3 id="Category">Category :</h3><br>
+                <h3 id="Category">This product is available</h3><br>
+                <input type="number" id="quantity" value="1">
+
+                <button
+                    style="width: 300px; border: none; border-radius: 10px; height: 50px; color: white; background-color: #5147E8 ;"
+                    id="cart">Add
+                    to Bag</button>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="bg-gray-800" aria-labelledby="footer-heading" style="margin-top: 103px;">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <p class="mt-2 text-base text-gray-300 md:mt-0">© 2023 NextShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+        import { getFirestore, query, onSnapshot, doc, where, addDoc, collection } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
+        import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-storage.js"
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyB3ZvtJgykA5zlFpKuhnsSq_Ay6HKZlNec",
+            authDomain: "task-e2185.firebaseapp.com",
+            projectId: "task-e2185",
+            storageBucket: "task-e2185.appspot.com",
+            messagingSenderId: "447773639548",
+            appId: "1:447773639548:web:c917761b6d901682781af9",
+            measurementId: "G-0D3K0WGC3G"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const auth = getAuth(app);
+        const storage = getStorage(app);
+
+        let detail = JSON.parse(localStorage.getItem("Detail"))
+
+        let url = document.getElementById("image").src = detail.Image
+        let title = document.getElementById("name").innerText = detail.Title
+        let price = document.getElementById("price").innerText = `$${detail.Price}`
+        document.getElementById("cart").addEventListener("click", async () => {
+            let quantity = document.getElementById("quantity").value;
+            console.log(quantity);
+            try {
+                const docRef = await addDoc(collection(db, "Nextcart"), {
+                    Pic: url,
+                    Title: title,
+                    Price: price,
+                    Quantity: quantity,
+                });
+                Swal.fire({
+                    icon: "success",
+                    title: `Successfully your product has been carted`,
+                    ConfirmButtonText: `Ok`,
+                }).then(() => {
+                    window.location.href = "./Cart.html"
+                })
+                console.log("Document written with ID: ", docRef.id);
+            } catch (error) {
+                console.error("nextCart Error:", error);
+            }
+        })
+        document.getElementById("signout").addEventListener('click', () => {
+            signOut(auth).then(() => {
+                Swal.fire({
+                    title: `Log Out`,
+                    text: `Log Out Successfully `,
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                });
+                function wrongs() {
+                    window.location.href = "./SignUp.html";
+                }
+                setInterval(wrongs, 3000);
+            }).catch((error) => {
+                console.log("LogOut Error -->", error)
+            });
+        });
+
+        document.getElementById("signout").addEventListener('click', () => {
+            signOut(auth).then(() => {
+                Swal.fire({
+                    title: `Log Out`,
+                    text: `Log Out Successfully `,
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                });
+                function wrongs() {
+                    window.location.href = "./SignUp.html";
+                }
+                setInterval(wrongs, 3000);
+            }).catch((error) => {
+                console.log("LogOut Error -->", error)
+            });
+        });
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                const uid = user.uid;
+                console.log("User Checking UID: ", uid);
+            }
+            else {
+                Swal.fire({
+                    title: `Account`,
+                    text: `First Create An Account`,
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+                function wrong() {
+                    window.location.href = "./SignUp.html"
+                }
+                setInterval(wrong, 2000);
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+
+</html>
